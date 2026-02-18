@@ -1,4 +1,4 @@
-#
+import csv
 import requests
 from bs4 import BeautifulSoup 
 import json
@@ -45,7 +45,7 @@ with open("books.json","w",encoding="utf-8") as f:
          json.dump(books,f,indent=2, ensure_ascii=False)
 
          with open("books.csv","w")as f:
-             import csv
+             
 
              writer = csv.Dictwriter(f, fieldnames = ["title","price","currency"])
              writer.writeheader()
