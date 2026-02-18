@@ -1,3 +1,4 @@
+#
 import requests
 from bs4 import BeautifulSoup 
 import json
@@ -34,12 +35,12 @@ def scrape_books(url):
 
 books = scrape_books(url)
 with open("books.json","w",encoding="utf-8") as f:
-     import json
+     
 
      json.dump(books,f, indent=2,ensure_ascii =False)
 
      with open("books.csv","w", encoding="utf-8") as f:
-         import json
+         
 
          json.dump(books,f,indent=2, ensure_ascii=False)
 
